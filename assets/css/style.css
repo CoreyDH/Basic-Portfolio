@@ -144,7 +144,10 @@ input[type="submit"] {
   background-color: #48aaef;
   padding: 10px 30px;
   font-size: 18px;
-  border:none;
+  border: 3px solid rgba(0,0,0,0);
+}
+input[type="submit"]:hover {
+  border: 3px solid #70c4ff;
 }
 
 /* Portfolio */
@@ -158,6 +161,9 @@ input[type="submit"] {
 .portfolio-item:nth-child(odd) {
   float: right;
 }
+.portfolio-item img {
+  transition: opacity 0.8s ease;
+}
 .portfolio-caption {
   width: 100%;
   color: #fff;
@@ -170,8 +176,11 @@ input[type="submit"] {
   position: absolute;
   top: 165px;
 }
-.portfolio-caption:hover {
+.portfolio-item:hover .portfolio-caption {
   background-color: #1a4b6d;
+}
+.portfolio-item:hover img {
+  opacity: 0.7;
 }
 
 /* Footer */
